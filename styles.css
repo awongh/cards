@@ -1,7 +1,7 @@
 body{
     height:600px;
     font-family: monospace;
-    background: #00CC00;
+    background: #004d00;
 }
 #title{
     width:190px;
@@ -13,7 +13,7 @@ body{
 #header{
     margin: 10px;
     padding: 10px 20px 10px 20px;
-    background:#61ff61;
+    background:#469948;
     -moz-border-radius:6px;
     border-radius:6px;
     height: 85px;
@@ -67,7 +67,7 @@ a:hover{
 #content{
   margin: 10px;
     padding: 10px 20px 10px 20px;
-    background:#61ff61;
+    background:#469948;
     -moz-border-radius:6px;
     border-radius:6px;
     width:450px;
