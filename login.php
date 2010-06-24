@@ -19,4 +19,4 @@ if ($realpassword != $password)
 # Username / password OK, set the cookie and redirect to index.php
 $authsecret = $redis->get("uid:$userid:auth");
 setcookie("auth",$authsecret,time()+3600*24*365);
-header("Location: ".SITEURL.'index.html');
+header("Location: ".SITEURL.'index.php');

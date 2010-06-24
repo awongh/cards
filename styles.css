@@ -1,0 +1,87 @@
+body{
+    height:600px;
+    font-family: monospace;
+    background: #00CC00;
+}
+#title{
+    width:190px;
+    font-size:20px;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+#header{
+    margin: 10px;
+    padding: 10px 20px 10px 20px;
+    background:#61ff61;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    height: 85px;
+    width:450px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#nav{
+    margin: 10px 0 0 0;
+}
+.button{
+    border:none;
+    display:inline;
+    background: #FFFF8F;
+    text-align:center;
+    padding: 7px 9px 7px 9px;
+}
+#nav button:hover{
+    cursor:pointer;
+    background:#D9D97A;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    cursor:pointer;
+    background:#D9D97A;
+
+}
+#scores{
+    margin-top:30px;
+}
+.board{
+    margin: 7px 7px 7px 7px;
+    display:inline;
+}
+#logout{
+    float:right;
+}
+#total{
+    font-weight: bold;
+}
+#game_total{
+    font-weight: bold;
+}
+#tablediv{
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#forms{
+  margin: 10px;
+    padding: 10px 20px 10px 20px;
+    background:#61ff61;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    width:450px;
+    margin-left:auto;
+    margin-right:auto;
+   
+}
+#forms label{
+    display:block;
+}
+#forms .submit{
+    display:block;
+
+}
+.blurb{
+    text-align:center;
+}

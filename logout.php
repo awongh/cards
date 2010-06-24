@@ -2,7 +2,7 @@
 include("redis.php");
 
 if (!isLoggedIn()) {
-    header("Location: ".SITEURL.'login.html');
+    header("Location: ".SITEURL.'login-register.php');
     exit;
 }
 
@@ -14,5 +14,5 @@ $redis->set("uid:$userid:auth",$newauthsecret);
 $redis->set("auth:$newauthsecret",$userid);
 $redis->delete("auth:$oldauthsecret");
 
-header("Location: ".SITEURL.'login.html');
+header("Location: ".SITEURL.'login-register.php');
 ?>
