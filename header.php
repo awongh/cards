@@ -13,4 +13,4 @@
     </script>   
 </head>
 <body>
-<div id="title"><img src="img/s:20.png"/>::CARDS::<img src="img/s:20.png"/></div>
+<div id="title"><img src="img/s_20.png"/>::CARDS::<img src="img/s_20.png"/></div>
