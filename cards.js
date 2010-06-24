@@ -11,7 +11,7 @@ var cards = {
 
     addValue : function(){
         var gameid = $('#gameid').attr('game');  
-        $.post('addValue.php', {'gameid' : gameid}, function(data){
+        $.post('ajax.php', {'function' : 'addValue', 'gameid' : gameid}, function(data){
             var score_board = $('#total');
             var current_score = score_board.html();
 
@@ -36,7 +36,7 @@ var cards = {
         //grey out button
         //make thinking icon in table div
         if(current_score >= 50){
-            $.post('getcards.php', function(data){
+            $.post('ajax.php', {'function' : 'getCards'}, function(data){
                 //hide thinking
                 //need to parse json here first
                 var mydata = JSON.parse(data);
@@ -82,7 +82,7 @@ var cards = {
         var positionx = $(this).attr('positionx');
         var positiony = $(this).attr('positiony');
         var that = this;
-        $.post('markcard.php', {'positionx' : positionx, 'positiony' : positiony, 'gameid' : gameid},
+        $.post('ajax.php', {'function' : 'markCard', 'positionx' : positionx, 'positiony' : positiony, 'gameid' : gameid},
             function(data){
                 var mydata = JSON.parse(data);
                 var img = $('<img>').attr('src', cards.URL+'img/'+mydata.card_value+'.png');
@@ -108,7 +108,7 @@ var cards = {
                 }else{
 
                     var game_score = $('#game_total');
-                    var values = mydata.card_value.split(':');
+                    var values = mydata.card_value.split('_');
                     var score = (+game_score.html()) + (+values[1]);
                     game_score.empty();
                     game_score.html(score);
@@ -122,7 +122,7 @@ var cards = {
 
     cashOut : function(){
         var gameid = $('#gameid').attr('game');  
-        $.post('cashout.php', {'gameid' : gameid},
+        $.post('ajax.php', {'function' : 'cashOut', 'gameid' : gameid},
             function(data){
                 $('#tablediv').slideUp('slow');
                 var mydata = JSON.parse(data);
