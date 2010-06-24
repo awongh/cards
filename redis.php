@@ -36,9 +36,10 @@ function gt($param) {
     return trim($val);
 }
 function goback($msg) {
-    $content = '<div id ="error">'.utf8entities($msg).'<br>';
-    $content .= '<a href="javascript:history.back()">Please return back and try again</a></div>';
-    include('static.php');
+//    include("header.php");
+    echo('<div id ="error">'.utf8entities($msg).'<br>');
+    echo('<a href="javascript:history.back()">Please return back and try again</a></div>');
+//    include("footer.php");
     exit;
 }
 function utf8entities($s) {
