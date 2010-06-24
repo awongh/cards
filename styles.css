@@ -85,3 +85,10 @@ a:hover{
 .blurb{
     text-align:center;
 }
+#card-loading{
+    margin-left:10px;
+    margin-right:10px;
+}
+#deck-loading{
+    margin: 60px 180px 0 180px;
+}

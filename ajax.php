@@ -15,7 +15,8 @@ if (!gt('function') === false){
         exit();
     }
 }
-echo "badParams";
+$return = array('error'=>'bad params');
+echo json_encode($return);
 exit();
 
 /**
@@ -43,7 +44,8 @@ function getCards($User, $redis){
     $value = getCurrentValue($User['id']);
 
     if($value < 50){
-        echo "lessThanFifty";
+        $return = array('error'=>'not enough credit');
+        echo json_encode($return);
         exit();
     }
 
@@ -104,7 +106,8 @@ function getCards($User, $redis){
 **/
 function markCard($User, $redis){
     if (gt('positionx') === false|| gt('positiony') === false|| !gt('gameid')){
-        echo 'badParams';
+        $return = array('error'=>'bad params');
+        echo json_encode($return);
         exit();
     }
 
@@ -114,7 +117,10 @@ function markCard($User, $redis){
     $gameid = gt('gameid');
 
     //is game id associated with user?
-    if(!isValidGameId($User['id'], $gameid)) echo 'notAValisGameId';
+    if(!isValidGameId($User['id'], $gameid)){
+        $return = array('error'=>'not a valid gameid');
+        echo json_encode($return);
+    }
 
     //get the card from the db
     $card_value = $redis->get("card:$positionx"."_"."$positiony:gameid:$gameid");
@@ -152,13 +158,17 @@ function markCard($User, $redis){
 **/
 function cashOut($User, $redis){
     if (!gt('gameid')){
-        echo "badParams";
+        $return = array('error'=>'bad params');
+        echo json_encode($return);
         exit();
     }
     $gameid = gt('gameid');
 
     //is game id associated with user?
-    if(!isValidGameId($User['id'], $gameid)) echo 'notAValidGameId';
+    if(!isValidGameId($User['id'], $gameid)){
+        $return = array('error'=>'not a valid gameid');
+        echo json_encode($return);
+    }
 
     //tally the total for this game
     $value = 0;

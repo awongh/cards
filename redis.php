@@ -1,8 +1,7 @@
 <?php
 define('SITEURL', 'http://localhost/code/temp/cards/');
-define('REDISPATH', '../../libs/lib/');
 
-require(REDISPATH.'Predis.php');
+require('Predis.php');
 
 $redis = new Predis\Client();
 
