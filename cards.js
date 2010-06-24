@@ -30,7 +30,7 @@ var cards = {
                 var score_board = $('#total');
                 var current_score = score_board.html();
                 var total = mydata.total;
-                if(total >= 50) $('#getCards').attr('disabled', '');
+                if(total >= 50) $('#getCards').removeAttr('disabled');
                 score_board.empty();
                 score_board.html(total);
             }else{
@@ -56,7 +56,7 @@ var cards = {
         load.attr('id', 'deck-loading');
         $(tablediv).show().append(load);
         $('#getCards').attr('disabled', 'disabled');
-        $('#cashOut').attr('disabled', '');
+        $('#cashOut').removeAttr('disabled');
         var score_board = $('#total');
         var current_score = (+score_board.html());
 
@@ -150,7 +150,9 @@ var cards = {
                         $(tablediv).empty();
         
                         //make sure to disable correct buttons
-                        if(mydata.total >= 50) $('#getCards').attr('disabled', '');
+                        var score_board = $('#total');
+                        var score = score_board.html();
+                        if((+score) >= 50) $('#getCards').removeAttr('disabled');
                         $('#cashOut').attr('disabled', 'true');
                     }else{
 
@@ -197,7 +199,8 @@ var cards = {
                     $('#tablediv').empty();
 
                     //make sure the right buttons are disabled/enabled
-                    if(mydata.total >= 50) $('#getCards').attr('disabled', '');
+                    //if(mydata.total >= 50) $('#getCards').attr('disabled', '');
+                    if(mydata.total >= 50) $('#getCards').removeAttr('disabled');
                     $('#cashOut').attr('disabled', 'true');
 
                 }else{
