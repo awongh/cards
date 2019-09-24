@@ -1,5 +1,5 @@
 <?php
-define('SITEURL', 'http://localhost/code/temp/cards/');
+define('SITEURL', 'http://localhost:8000/');
 
 require('Predis.php');
 

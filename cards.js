@@ -1,5 +1,5 @@
 var cards = {
-    URL : 'http://localhost/code/temp/cards/',
+    URL : '/',
 
     /**
      * setup

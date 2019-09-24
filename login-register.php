@@ -4,7 +4,7 @@
     <p class="blurb">Welcome. Cards is an ajax web app built with redis. Enjoy.</p>
 </div>
 <div id="content">
-    <h2>login</h2
+    <h2>login</h2>
     <form action="./login.php" method="post">
         <label>username</label>
         <input type="text" name="username" />
@@ -12,7 +12,7 @@
         <input type="text" name="password" />
         <input class="submit" type="submit" name="submit" value="login"/>
     </form>
-    <h2>register</h2
+    <h2>register</h2>
     <form action="./register.php" method="post">
         <label>username</label>
         <input type="text" name="username" />
