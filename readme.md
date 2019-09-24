@@ -1,6 +1,6 @@
 # CARDS
 
-[](card.png)!
+![](card.png)
 
 ### requirements:
 
