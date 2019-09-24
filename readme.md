@@ -6,7 +6,7 @@
 
 ###### php
 
-Mac Os: `/usr/bin/php -S localhost:80`
+Mac Os: `/usr/bin/php -S localhost:8000`
 
 [mac os preinstalled PHP](https://medium.com/@romaninsh/install-php-7-2-on-macos-high-sierra-with-homebrew-bdc4d1b04ea6)
 
